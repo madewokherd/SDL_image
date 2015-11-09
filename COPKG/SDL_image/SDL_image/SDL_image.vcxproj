@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -27,26 +27,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -170,15 +170,16 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\SDL.redist.1.2.15.13\build\native\SDL.redist.targets" Condition="Exists('..\packages\SDL.redist.1.2.15.13\build\native\SDL.redist.targets')" />
-    <Import Project="..\packages\SDL.1.2.15.13\build\native\SDL.targets" Condition="Exists('..\packages\SDL.1.2.15.13\build\native\SDL.targets')" />
-    <Import Project="..\packages\zlib.redist.1.2.7.34\build\native\zlib.redist.targets" Condition="Exists('..\packages\zlib.redist.1.2.7.34\build\native\zlib.redist.targets')" />
-    <Import Project="..\packages\zlib.1.2.7.34\build\native\zlib.targets" Condition="Exists('..\packages\zlib.1.2.7.34\build\native\zlib.targets')" />
-    <Import Project="..\packages\libpng.redist.1.5.10.9\build\native\libpng.redist.targets" Condition="Exists('..\packages\libpng.redist.1.5.10.9\build\native\libpng.redist.targets')" />
-    <Import Project="..\packages\libpng.1.5.10.9\build\native\libpng.targets" Condition="Exists('..\packages\libpng.1.5.10.9\build\native\libpng.targets')" />
-    <Import Project="..\packages\libjpeg.redist.8.0.4.14\build\native\libjpeg.redist.targets" Condition="Exists('..\packages\libjpeg.redist.8.0.4.14\build\native\libjpeg.redist.targets')" />
-    <Import Project="..\packages\libjpeg.8.0.4.14\build\native\libjpeg.targets" Condition="Exists('..\packages\libjpeg.8.0.4.14\build\native\libjpeg.targets')" />
-    <Import Project="..\packages\libtiff.redist.4.0.1.8\build\native\libtiff.redist.targets" Condition="Exists('..\packages\libtiff.redist.4.0.1.8\build\native\libtiff.redist.targets')" />
-    <Import Project="..\packages\libtiff.4.0.1.8\build\native\libtiff.targets" Condition="Exists('..\packages\libtiff.4.0.1.8\build\native\libtiff.targets')" />
+    <Import Project="..\packages\SDL.redist.1.2.15.16\build\native\SDL.redist.targets" Condition="Exists('..\packages\SDL.redist.1.2.15.16\build\native\SDL.redist.targets')" />
+    <Import Project="..\packages\SDL.1.2.15.16\build\native\SDL.targets" Condition="Exists('..\packages\SDL.1.2.15.16\build\native\SDL.targets')" />
+    <Import Project="..\packages\zlib.1.2.8.8\build\native\zlib.targets" Condition="Exists('..\packages\zlib.1.2.8.8\build\native\zlib.targets')" />
+    <Import Project="..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.targets" Condition="Exists('..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.targets')" />
+    <Import Project="..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.targets" Condition="Exists('..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.targets')" />
+    <Import Project="..\packages\libpng.redist.1.6.18.1\build\native\libpng.redist.targets" Condition="Exists('..\packages\libpng.redist.1.6.18.1\build\native\libpng.redist.targets')" />
+    <Import Project="..\packages\libpng.1.6.18.1\build\native\libpng.targets" Condition="Exists('..\packages\libpng.1.6.18.1\build\native\libpng.targets')" />
+    <Import Project="..\packages\libjpeg.redist.9.0.1.4\build\native\libjpeg.redist.targets" Condition="Exists('..\packages\libjpeg.redist.9.0.1.4\build\native\libjpeg.redist.targets')" />
+    <Import Project="..\packages\libjpeg.9.0.1.4\build\native\libjpeg.targets" Condition="Exists('..\packages\libjpeg.9.0.1.4\build\native\libjpeg.targets')" />
+    <Import Project="..\packages\libtiff.redist.4.0.6.2\build\native\libtiff.redist.targets" Condition="Exists('..\packages\libtiff.redist.4.0.6.2\build\native\libtiff.redist.targets')" />
+    <Import Project="..\packages\libtiff.4.0.6.2\build\native\libtiff.targets" Condition="Exists('..\packages\libtiff.4.0.6.2\build\native\libtiff.targets')" />
   </ImportGroup>
 </Project>

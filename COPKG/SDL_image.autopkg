@@ -1,5 +1,13 @@
 @import @"version.inc";
 
+configurations {
+	UserPlatformToolset {
+	    // Needed because ptk lacks VS2015 support
+        	key = "PlatformToolset";
+        	choices: "v120,v140";
+	};
+}
+
 nuget {
 	nuspec {
 		id = SDL_image;
@@ -31,7 +39,7 @@ Homepage: http://www.libsdl.org/projects/SDL_image/";
 			..\*.h,
 		};
 
-		("release,debug", "Win32,x64", "v100,v110") => {
+		("release,debug", "Win32,x64", "v120,v140") => {
 			[${0},${1},${2}] {
 				lib:     { SDL_image\${0}\${1}\${2}\SDL_image.lib };
 				bin:     { SDL_image\${0}\${1}\${2}\SDL_image.dll };
@@ -43,11 +51,11 @@ Homepage: http://www.libsdl.org/projects/SDL_image/";
 
 	dependencies {
 		packages : {
-			zlib/1.2.7.34,
-			libjpeg/8.0.4.14,
-			libpng/1.5.10.9,
-			libtiff/4.0.1.8,
-			SDL/1.2.15.13,
+			zlib/1.2.8.8,
+			libjpeg/9.0.1.4,
+			libpng/1.6.18.1,
+			libtiff/4.0.6.2,
+			SDL/1.2.15.16,
 		};
 	}
   

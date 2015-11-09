@@ -6,24 +6,14 @@ if "%1"=="noclean" (
 	set __NOCLEAN__=true
 	shift)
 
-setlocal
-call "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" amd64
-call :build x64 v110
-endlocal
+nuget restore SDL_image\SDL_image.sln
 
 setlocal
-call "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" x86
-call :build Win32 v110
-endlocal
-
-setlocal
-call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" amd64
-call :build x64 v100
-endlocal
-
-setlocal
-call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x86
-call :build Win32 v100
+call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86
+call :build x64 v140
+call :build Win32 v140
+call :build x64 v120
+call :build Win32 v120
 endlocal
 
 if "__NOCLEAN__"=="true" goto :eof
@@ -39,4 +29,6 @@ goto :eof
 :clean
 rd /s /q SDL_image\SDL_image\Debug
 rd /s /q SDL_image\SDL_image\Release
+
+:eof
 
