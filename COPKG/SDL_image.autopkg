@@ -25,7 +25,7 @@ Note that WEBP support is not available yet in this package.
 Homepage: http://www.libsdl.org/projects/SDL_image/";
 		releaseNotes: "Release of 1.2.12 libraries.";
 		copyright: Copyright 2013;
-		tags: { SDL, native, CoApp };
+		tags: { SDL, native, CoApp, v140, v120, dynamic };
 
 	};
 
@@ -53,7 +53,7 @@ Homepage: http://www.libsdl.org/projects/SDL_image/";
 		packages : {
 			zlib/1.2.8.8,
 			libjpeg/9.0.1.4,
-			libpng/1.6.18.1,
+			libpng/1.6.19.1,
 			libtiff/4.0.6.2,
 			SDL/1.2.15.16,
 		};
